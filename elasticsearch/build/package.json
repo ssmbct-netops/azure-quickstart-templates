@@ -7,12 +7,16 @@
     "gulp": "^3.9.0",
     "gulp-util": "^3.0.6",
     "lodash": ">=4.17.11",
-    "yamljs": "^0.2.4"
+    "yamljs": "^0.2.4",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "author": "Trent Swanson",
-  "license": "MIT"
+  "license": "MIT",
+  "snyk": true
 }

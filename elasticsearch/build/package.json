@@ -4,15 +4,19 @@
   "description": "Elasticsearch Azure Resource Manager (ARM) Template Build Script",
   "main": "gulp build",
   "dependencies": {
-    "gulp": "^3.9.0",
+    "gulp": "^4.0.0",
     "gulp-util": "^3.0.6",
     "lodash": ">=4.17.11",
-    "yamljs": "^0.2.4"
+    "yamljs": "^0.2.4",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublish": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "author": "Trent Swanson",
-  "license": "MIT"
+  "license": "MIT",
+  "snyk": true
 }
